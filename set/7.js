@@ -6,6 +6,7 @@ const str = "hello world";
 
 const uniqueString=(str)=>{
     return [...new Set(str)].join('')
+    
 
 }
 console.log(uniqueString(str))

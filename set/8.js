@@ -3,14 +3,10 @@
 
 const str="hello world"
 const charOccurance=(str1)=>{
-const uniqueStr=new Set(str);
-const result={}
-
-uniqueStr.forEach(str=>{
-
-     result[str]=str1.split(str).length-1
-
-})
-return result;
+     let count={}
+     new Set(str1).forEach(item=>{
+          count[item]=str1.split(item).length-1
+     })
+     return count
 }
 console.log(charOccurance(str))

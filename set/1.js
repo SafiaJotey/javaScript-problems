@@ -2,8 +2,6 @@
  
 
 function uniqueElements(arr){
-    // const uniqueElements=[...new Set(arr)]
-    const uniqueElements=Array.from(new Set(arr))
-    return uniqueElements;
+    return [...new Set(arr)]
 }
-console.log(uniqueElements([11, 11, 0,2,3,4,2,7]))
+console.log(uniqueElements([11, 11, 0,2,3,4,2,7])) 

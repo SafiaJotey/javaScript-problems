@@ -4,12 +4,13 @@ const arr=[1,2,,2,4,3,4,,5,3,5]
 const repeatingElement=(arr)=>{
 
 const newSet= new Set()
-for (let element of arr){
-    if(newSet.has(element)){
-        return element
+for(let item of arr){
+    if(newSet.has(item)){
+        return item
     }
-    newSet.add(element)
+    newSet.add(item)
 }
+
 }
 
 

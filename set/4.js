@@ -12,10 +12,13 @@ function diffArray1(arr1, arr2){
 console.log(diffArray1(arr1, arr2))
 
 
-//with set
+// with set
 
 function diffArray2(arr1, arr2){
     return arr1.filter(item=>!new Set(arr2).has(item))
     
 }
-console.log(diffArray2(arr1, arr2))
+console.log(diffArray2(arr1, arr2)) //[1,2] not [1,2,5] for that we need map also
+
+
+
