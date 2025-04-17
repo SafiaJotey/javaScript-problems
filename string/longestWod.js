@@ -1,18 +1,22 @@
 
 //with reduce
 // const longestWord=(str)=>{
-// return str.split(/\s+/).reduce((longest,current)=>longest.length>current.length?longest:current,"")
+// let wordArr=str.toLowerCase().split(/\s+/)
+
+// return wordArr.reduce((longest,current)=>longest.length>current.length?longest:current,"")
 // }
 
 const longestWord=(str)=>{
-   let words= str.split(/\s+/);
-   let longest=''
-   for(let word of words){
-if(word.length>longest.length) longest=word
-    
+   let longest='';
+   const wordArr=str.split(/\s+/);
+   for(word of wordArr){
+      if(word.length>longest.length){
+         longest=word
+      }
    }
-   return longest
-    }
+   return longest;
+       }
+       
     
 
 console.log(longestWord("hi I am      Jotey"))

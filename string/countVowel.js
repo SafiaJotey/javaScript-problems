@@ -1,9 +1,8 @@
 const countVowel=(str)=>{
-
-    return str.match(/[aeiou]/ig).length
+return str.match(/[aeiou]/ig).length
 
 }
-console.log(countVowel('asde'))
+console.log(countVowel('asdei'))
 
 
 // Breakdown:
