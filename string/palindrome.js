@@ -1,27 +1,28 @@
 
 
 // with building fun
-// function isPalindrome(str) {
-// const cleanedStr=str.toLowerCase().replace(/[^a-z0-9]/g,'');
-// return cleanedStr===cleanedStr.split('').reverse().join('')
-// }
-
+function isPalindromeBuiltin(str) {
+const cleaned=str.toLowerCase().replace(/[^a-z0-9]/g,'')
+return cleaned===cleaned.split('').reverse().join('')
+}
 
 
 
   // using two pointer
-  function isPalindrome(str) {
-  let cleanedStr=str.toLowerCase().replace(/[^a-z0-9]/g,'')
-  let left=0, right=cleanedStr.length-1;
-  if(left<right){
-    if(cleanedStr[left]!==cleanedStr[right]) return false;
-  left++;
-  right--;
-  }
-    return true;
+  function isPalindromeManual(str) {
+    let cleaned= str.toLowercCase().replace(/[^a-z0-9]/g,'');
+    let left=0,right=cleaned.length-1;
+    while(left<right){
+      if(cleaned[left]!==cleaned[right]) return false;
+      left++, right--
+    
+    }
+    return true
+ 
       }
     
-  console.log(isPalindrome("A man, a plan, a canal: Panama")); // true
+  console.log(isPalindromeManual("A man, a plan, a canal: Panama")); // true
+  console.log(isPalindromeBuiltin("A man, a plan, a canal: Panama")); 
 //   Explanation:
 // / ... /: This denotes the start and end of the regular expression.
 

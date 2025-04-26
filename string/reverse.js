@@ -1,13 +1,15 @@
-// const reverseString=(str)=>{
-// return str.split('').reverse().join('')
-// }
 
-const reverseString=(str)=>{
+
+const reverseStringBuiltin=(str)=>{
+return str.split('').reverse().join('')
+}
+
+const reverseStringManual=(str)=>{
 let reversedStr=[]
-for(let i=str.split('').length-1; i>=0; i--){
-
-    reversedStr.push(str.split('')[i])
+for(i=str.length-1; i>=0; i--){
+    reversedStr.push(str[i])
 }
 return reversedStr.join('')
     }
-console.log(reverseString("hello"))
+console.log(reverseStringManual("hello"))
+console.log(reverseStringBuiltin("hello"))
