@@ -1,23 +1,17 @@
 function compressString(str) {
-  if (!str.length) return str;
-  
   let compressed = '';
   let count = 1;
-  let currentChar = str[0];
   
-  for (let i = 1; i < str.length; i++) {
-    if (str[i] === currentChar) {
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i + 1]) {
       count++;
     } else {
-      compressed += currentChar + (count > 1 ? count : '');
-      currentChar = str[i];
+      compressed += str[i] + count;
       count = 1;
     }
   }
   
-  compressed += currentChar + (count > 1 ? count : '');
-  return compressed
-  // return compressed.length < str.length ? compressed : str;
+  return compressed;
 }
   // Example:
 

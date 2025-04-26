@@ -1,25 +1,26 @@
 
 //with reduce
-// const longestWord=(str)=>{
-// let wordArr=str.toLowerCase().split(/\s+/)
+const longestWordBulitin=(str)=>{
+return str.split(/\s+/).reduce((longest,current)=>current.length>longest.length?current:longest,'')
+}
 
-// return wordArr.reduce((longest,current)=>longest.length>current.length?longest:current,"")
-// }
+const longestWordManual=(str)=>{
+let longest='';
+let cleaned= str.split(/\s+/);
 
-const longestWord=(str)=>{
-   let longest='';
-   const wordArr=str.split(/\s+/);
-   for(word of wordArr){
-      if(word.length>longest.length){
-         longest=word
-      }
+for(word of cleaned){
+  
+   if(word.length >= longest.length){
+      longest=word
    }
-   return longest;
-       }
+}
+return longest
+}
        
     
 
-console.log(longestWord("hi I am      Jotey"))
+console.log(longestWordBulitin("hi I am      Jotey"))
+console.log(longestWordManual("hi I am      Jotey"))
 
 // Explanation:
 // / ... /: Denotes the regular expression.
