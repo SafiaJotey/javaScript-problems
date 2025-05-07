@@ -11,7 +11,7 @@ function compressString(str) {
     }
   }
   
-  return compressed;
+  return compressed.length < str.length ? compressed : str;
 }
   // Example:
 
