@@ -8,7 +8,7 @@ const WithPromiseAll1 = (promise1, promise2) => {
 
 
 const WithoutPromiseAll1 = (promise1, promise2) => {
-    let value1, value2;
+    let value1;
     
     return promise1
         .then(result1 => {
@@ -16,14 +16,14 @@ const WithoutPromiseAll1 = (promise1, promise2) => {
             return promise2;
         })
         .then(result2 => {
-            value2 = result2;
-            return value1 + value2;
+          
+            return value1 + result2;
         });
 }
 
 
 
-
+//I dont Like it
 const WithoutPromiseAll2 = (promise1, promise2) => {
     return Promise.resolve()
         .then(() => promise1)
