@@ -155,3 +155,27 @@ console.log(advancedMap.get(arrKey));    // 'Array value'
 advancedMap.set(NaN, 'NaN value');
 console.log(advancedMap.get(NaN));  // 'NaN value'
 
+
+// Converting Between Map and Other Structures
+// Map to Array
+const myMap = new Map([
+  ['a', 1],
+  ['b', 2],
+  ['c', 3]
+]);
+
+//1. Convert to array of arrays
+const arrayFromMap = Array.from(myMap);
+console.log(arrayFromMap);  // [['a', 1], ['b', 2], ['c', 3]]
+
+// 2. Using spread operator
+const spreadArray = [...myMap];
+console.log(spreadArray);   // [['a', 1], ['b', 2], ['c', 3]]
+
+//3. Extract only keys
+const keys = [...myMap.keys()];
+console.log(keys);  // ['a', 'b', 'c']
+
+// Extract only values
+const values = [...myMap.values()];
+console.log(values);  // [1, 2, 3]
