@@ -179,3 +179,15 @@ console.log(keys);  // ['a', 'b', 'c']
 // Extract only values
 const values = [...myMap.values()];
 console.log(values);  // [1, 2, 3]
+
+// Array to Map
+
+const arr = [
+  ['name', 'John'],
+  ['age', 30],
+  ['city', 'Boston']
+];
+
+const newMap = new Map(arr);
+console.log(newMap);  // Map(3) {'name' => 'John', 'age' => 30, 'city' => 'Boston'}
+
