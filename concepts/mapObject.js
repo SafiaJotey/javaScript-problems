@@ -84,3 +84,74 @@ const fruits = new Map([
 console.log(fruits.size);  // 3
 
 // Iterating Over Maps
+
+
+// Iterating Over Maps
+// 1. forEach() - Loop through entries
+const users = new Map([
+  ['user1', 'Alice'],
+  ['user2', 'Bob'],
+  ['user3', 'Charlie']
+]);
+
+users.forEach((value, key, map) => {
+  console.log(`${key}: ${value}`);
+});
+// Output:
+// user1: Alice
+// user2: Bob
+// user3: Charlie
+
+// 2. for...of loop with different iterators
+const scores = new Map([
+  ['John', 85],
+  ['Emma', 92],
+  ['Mike', 78]
+]);
+
+
+// Iterate over entries (key-value pairs)
+for (const [key, value] of scores) {
+  console.log(`${key} scored ${value}`);
+}
+
+// keys() - iterate over keys
+for (const key of scores.keys()) {
+  console.log(key);  // John, Emma, Mike
+}
+
+// values() - iterate over values
+for (const value of scores.values()) {
+  console.log(value);  // 85, 92, 78
+}
+
+// entries() - same as default iteration
+for (const [key, value] of scores.entries()) {
+  console.log(`${key}: ${value}`);
+}
+
+
+// Working with Different Key Types
+const advancedMap = new Map();
+
+// Object as key
+const objKey = { id: 1 };
+advancedMap.set(objKey, 'Object value');
+
+// Function as key
+const funcKey = function() {};
+advancedMap.set(funcKey, 'Function value');
+
+// Array as key
+const arrKey = [1, 2, 3];
+advancedMap.set(arrKey, 'Array value');
+
+// Getting values
+console.log(advancedMap.get(objKey));    // 'Object value'
+console.log(advancedMap.get(funcKey));   // 'Function value'
+console.log(advancedMap.get(arrKey));    // 'Array value'
+
+// NaN as key (works! NaN === NaN for Map keys)
+advancedMap.set(NaN, 'NaN value');
+console.log(advancedMap.get(NaN));  // 'NaN value'
+
