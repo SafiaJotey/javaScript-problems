@@ -191,3 +191,26 @@ const arr = [
 const newMap = new Map(arr);
 console.log(newMap);  // Map(3) {'name' => 'John', 'age' => 30, 'city' => 'Boston'}
 
+// Map to Object
+
+const colorMap = new Map([
+  ['red', '#FF0000'],
+  ['green', '#00FF00'],
+  ['blue', '#0000FF']
+]);
+
+const objFromMap = Object.fromEntries(colorMap);
+console.log(objFromMap);
+// { red: '#FF0000', green: '#00FF00', blue: '#0000FF' }
+
+
+// Object to Map
+const obj = {
+  name: 'Sarah',
+  age: 28,
+  city: 'Chicago'
+};
+
+const mapFromObject = new Map(Object.entries(obj));
+console.log(mapFromObject);
+// Map(3) {'name' => 'Sarah', 'age' => 28, 'city' => 'Chicago'}
