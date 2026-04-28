@@ -86,3 +86,38 @@ console.log(anotherArray); // [1, 2, 3, 4, 5]
 
 const uniqueArray = [...new Set([1, 2, 2, 3, 3, 4])];
 console.log(uniqueArray); // [1, 2, 3, 4]
+
+
+
+// some common opperation with set
+
+const setA = new Set([1, 2, 3, 4]);
+const setB = new Set([3, 4, 5, 6]);
+
+// Union (A ∪ B)
+const union = new Set([...setA, ...setB]);
+console.log("set union",union); // Set(6) {1, 2, 3, 4, 5, 6}
+
+// Intersection (A ∩ B)
+const intersection = new Set([...setA].filter(x => setB.has(x)));
+console.log("set intersection",intersection); // Set(2) {3, 4}
+
+// Difference (A - B)
+const difference = new Set([...setA].filter(x => !setB.has(x)));
+console.log("difference",difference); // Set(2) {1, 2}
+
+// Symmetric Difference (A Δ B)
+const symmetricDiff = new Set([
+    ...[...setA].filter(x => !setB.has(x)),
+    ...[...setB].filter(x => !setA.has(x))
+]);
+console.log("symmetricDiff", symmetricDiff); // Set(4) {1, 2, 5, 6}
+
+// Subset check
+const isSubset = (setA, setB) => [...setA].every(x => setB.has(x));
+console.log("subset checking",isSubset(new Set([1, 2]), setA)); // true
+console.log("subset checking",isSubset(new Set([1, 5]), setA)); // false
+
+// Superset check
+const isSuperset = (setA, setB) => [...setB].every(x => setA.has(x));
+console.log("Super set checking",isSuperset(setA, new Set([1, 2]))); // true
