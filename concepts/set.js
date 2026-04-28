@@ -67,3 +67,23 @@ numSet.forEach((value, key, set)=>{
 })
 const iterator= numSet.values()
 console.log(iterator.next().value,iterator.next().value)
+
+
+// 5. Converting Between Sets and Arrays
+
+// Array to Set (remove duplicates)
+const arr = [1, 2, 2, 3, 4, 4, 5];
+const setFromArray = new Set(arr);
+console.log(setFromArray); // Set(5) {1, 2, 3, 4, 5}
+
+// Set to Array
+const arrFromSet = [...setFromArray];
+console.log(arrFromSet); // [1, 2, 3, 4, 5]
+
+// Alternative: Array.from()
+const anotherArray = Array.from(setFromArray);
+console.log(anotherArray); // [1, 2, 3, 4, 5]
+
+// Practical: Remove duplicates from array
+const uniqueArray = [...new Set([1, 2, 2, 3, 3, 4])];
+console.log(uniqueArray); // [1, 2, 3, 4]
