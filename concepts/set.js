@@ -112,7 +112,7 @@ const symmetricDiff = new Set([
     ...[...setB].filter(x => !setA.has(x))
 ]);
 console.log("symmetricDiff", symmetricDiff); // Set(4) {1, 2, 5, 6}
-
+// const setA = new Set([1, 2, 3, 4]);
 // Subset check
 const isSubset = (setA, setB) => [...setA].every(x => setB.has(x));
 console.log("subset checking",isSubset(new Set([1, 2]), setA)); // true
@@ -121,3 +121,19 @@ console.log("subset checking",isSubset(new Set([1, 5]), setA)); // false
 // Superset check
 const isSuperset = (setA, setB) => [...setB].every(x => setA.has(x));
 console.log("Super set checking",isSuperset(setA, new Set([1, 2]))); // true
+
+
+// WeakSet - Memory-Efficient Set
+
+// WeakSet can only store objects (not primitives)
+const weakSet = new WeakSet();
+
+// Only objects allowed
+const obj3 = { name: 'John' };
+const obj4 = { name: 'Jane' };
+
+weakSet.add(obj3);
+weakSet.add(obj4);
+// weakSet.add(42); // Error! Invalid value used in weak set
+
+
