@@ -51,3 +51,19 @@ mixedSet.add([1,2,3])
 
 console.log(mixedSet.size); // 10
 console.log(mixedSet)
+
+
+//iterate over sets
+
+const numSet=new Set([11,12,13,14,14,15,16,17,18])
+console.log(numSet)
+
+for( const num of numSet){
+    console.log(num)
+}
+
+numSet.forEach((value, key, set)=>{
+    console.log( value, key, set)// for set keys are same as values
+})
+const iterator= numSet.values()
+console.log(iterator.next().value,iterator.next().value)
