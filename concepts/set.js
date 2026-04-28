@@ -84,6 +84,5 @@ console.log(arrFromSet); // [1, 2, 3, 4, 5]
 const anotherArray = Array.from(setFromArray);
 console.log(anotherArray); // [1, 2, 3, 4, 5]
 
-// Practical: Remove duplicates from array
 const uniqueArray = [...new Set([1, 2, 2, 3, 3, 4])];
 console.log(uniqueArray); // [1, 2, 3, 4]
