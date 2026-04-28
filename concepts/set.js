@@ -27,3 +27,27 @@ console.log("set size",set1.size)//not like this size()
 set1.clear()
 console.log("clear the set", set1)
 console.log("after clearing set size", set1.size)
+
+
+// 3. Sets Can Store Different Data Types
+const mixedSet = new Set();
+
+mixedSet.add(42);              // number
+mixedSet.add('hello');         // string
+mixedSet.add(true);            // boolean
+mixedSet.add(null);            // null
+mixedSet.add(undefined);       // undefined
+mixedSet.add({ name: 'John' }); // object
+mixedSet.add([1, 2, 3]);       // array
+
+console.log(mixedSet.size); // 7
+
+// Note: Objects and array are compared by reference
+const obj1 = { id: 1 };
+const obj2 = { id: 1 };
+mixedSet.add(obj1);
+mixedSet.add(obj2); // Both added because different references
+mixedSet.add([1,2,3])
+
+console.log(mixedSet.size); // 10
+console.log(mixedSet)
