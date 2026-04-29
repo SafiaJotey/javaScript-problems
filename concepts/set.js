@@ -134,6 +134,6 @@ const obj4 = { name: 'Jane' };
 
 weakSet.add(obj3);
 weakSet.add(obj4);
-// weakSet.add(42); // Error! Invalid value used in weak set
+// weakSet.add(42); //  Invalid value used in weak set
 
 
