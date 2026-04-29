@@ -63,7 +63,7 @@ for( const num of numSet){
 }
 
 numSet.forEach((value, key, set)=>{
-    console.log( value, key, set)// for set keys are same as values
+    console.log( value, key, set)// keys are same as values
 })
 const iterator= numSet.values()
 console.log(iterator.next().value,iterator.next().value)
